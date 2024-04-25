@@ -9,7 +9,7 @@ colorama==0.4.6
 cryptography==42.0.1
 dynaconf==3.2.4
 exceptiongroup==1.2.0
-fastapi==0.95.2
+fastapi==0.110.1
 fastapi-authlib==0.0.4
 fastapi-sa==0.1.0
 greenlet==3.0.3

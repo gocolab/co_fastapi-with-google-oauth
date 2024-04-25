@@ -9,7 +9,7 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.add_middleware(SessionMiddleware, secret_key="add any string...")
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 oauth = OAuth()
 oauth.register(
@@ -24,7 +24,7 @@ oauth.register(
 )
 
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="app/templates")
 
 
 @app.get("/")
@@ -76,3 +76,13 @@ def logout(request: Request):
     request.session.pop('user')
     request.session.clear()
     return RedirectResponse('/')
+
+import uvicorn
+
+if __name__ == "__main__":
+    uvicorn.run(
+        app="app.main:app",
+        host="localhost",
+        port=8000,
+        reload=True
+    )
