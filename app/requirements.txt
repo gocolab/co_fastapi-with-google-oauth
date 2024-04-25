@@ -1,4 +1,4 @@
-fastapi==0.110.1
+fastapi==0.96.1
 aiomysql
 alembic
 anyio
