@@ -1,4 +1,5 @@
 .env
+!dockers\.env
 venv
 .pycharm
 .vscode

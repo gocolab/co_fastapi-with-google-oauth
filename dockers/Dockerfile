@@ -18,5 +18,5 @@ WORKDIR /apps/${APP_DIR_NAME}/app
 # RUN pip install --no-cache-dir -r ./requirements.txt
 RUN pip install --no-cache-dir -r ./requirements.txt
 
-RUN rm -rf .git
+# RUN rm -rf .git
 
